@@ -1,9 +1,41 @@
 Cherry Blossom Prediction Project
 
-Project Overview
+
+•Project Overview
 
 This project aims to predict cherry blossom bloom dates across five global locations—Washington, D.C., New York City, Vancouver, Liestal-Weideli (Switzerland), and Kyoto (Japan)—by integrating historical bloom records with meteorological variables. We employ machine learning models to analyze the relationship between climate factors such as maximum temperature (TMAX), minimum temperature (TMIN), average temperature (TAVG), and precipitation (PRCP) with bloom timing.
 
+To improve the accuracy and reliability of cherry blossom bloom predictions, feature engineering was conducted by integrating biological, climatological, and temporal variables. These features were selected to capture the seasonal temperature accumulation, precipitation trends, and long-term climate shifts that influence bloom timing across different geographic regions.
+
+
+•Temperature-Based Predictors
+
+Temperature is a primary driver of cherry blossom phenology. Several temperature-related variables were incorporated to enhance the model’s ability to capture thermal accumulation and variability:
+	•	Maximum Temperature (TMAX), Minimum Temperature (TMIN), and Average Temperature (TAVG) were used to assess the thermal conditions influencing bud development.
+	•	Diurnal Temperature Range (TMAX - TMIN) was included to account for temperature fluctuations that may accelerate or delay bloom timing.
+	•	Cumulative Growing Degree Days (GDD_cumsum) measured heat accumulation above a 5°C threshold, a critical determinant of the transition from dormancy to bloom.
+	•	Temperature Lags (TMAX_LAG, TMIN_LAG, TAVG_LAG) were computed over 10-day and 30-day periods to capture the delayed effects of temperature variations on bloom onset.
+	•	Rolling Averages (TAVG_30D, TAVG_60D) were incorporated to assess long-term warming or cooling trends that may influence bloom variability.
+
+Precipitation and Hydrological Variables
+
+Precipitation plays a crucial role in soil moisture availability and tree hydration, particularly in monsoon-influenced regions such as Kyoto. The following precipitation-based features were added to the dataset:
+	•	Total Precipitation (PRCP) was included as a direct climatic factor affecting bloom cycles.
+	•	Cumulative Precipitation (PRCP_cumsum) provided insight into seasonal moisture trends leading up to bloom events.
+	•	Precipitation Lag Effects (PRCP_LAG1, PRCP_LAG30) captured the influence of short-term and long-term precipitation variability on bloom onset.
+
+Solar Radiation and Photoperiodicity
+
+The effect of solar exposure and photoperiod was considered to account for regional differences in daylight duration and energy availability for bud development:
+	•	Daylength and Photoperiod (estimated based on latitude and date) were incorporated to analyze their effects on bloom timing, particularly in higher-latitude locations.
+	•	Sunshine Duration (where available) was included as a potential influencing factor in temperature accumulation and photosynthesis-driven processes.
+
+Climatic and Geographic Adjustments
+
+Cherry blossom timing is also affected by broader climatic trends and regional geographical factors. To address these considerations, the following variables were included:
+	•	Temperature Anomalies (ΔTAVG, ΔGDD) were introduced to assess deviations from historical norms and climate change influences.
+	•	Latitude, Longitude, and Altitude were included as geographic variables to account for regional climate variations, such as higher elevation delaying bloom onset due to lower temperatures.
+	•	Urban Heat Island Effect (for New York City and Washington, D.C.) was factored in to adjust for higher urban temperatures that may advance bloom timing compared to surrounding rural areas.
 
 Methodology
 
