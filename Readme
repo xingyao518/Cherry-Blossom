@@ -1,0 +1,29 @@
+Cherry Blossom Prediction Project
+
+Project Overview
+
+This project aims to predict cherry blossom bloom dates across five global locations—Washington, D.C., New York City, Vancouver, Liestal-Weideli (Switzerland), and Kyoto (Japan)—by integrating historical bloom records with meteorological variables. We employ machine learning models to analyze the relationship between climate factors such as maximum temperature (TMAX), minimum temperature (TMIN), average temperature (TAVG), and precipitation (PRCP) with bloom timing.
+
+
+Methodology
+
+We tested multiple models, including Linear Regression, Ridge, Lasso, Bayesian Ridge, Decision Trees, Random Forest, XGBoost, K-Nearest Neighbors (KNN), and Support Vector Regression (SVR). Based on Mean Squared Error (MSE) and R² scores, XGBoost and Random Forest emerged as the most accurate models for bloom date prediction, effectively capturing non-linear climate-bloom interactions. Kyoto’s growing degree days (GDD_cumsum) and precipitation-driven monsoon effects were also incorporated for better biological relevance.
+
+
+2025 Predicted Peak Bloom Cities
+	• Washington, D.C
+	•	Liestal-Weideli
+	•	Kyoto
+	• New York City
+	•	Vancouver
+
+Key Findings
+	•	Climate trends and temperature variability significantly impact bloom dates.
+	•	Regional models perform best when trained on location-specific climate indicators.
+	•	Data limitations (e.g., New York City’s sparse historical records) introduce uncertainty.
+	•	Machine learning models can enhance phenological forecasting but require continuous updates with real-time data.
+
+Next Steps & Future Work
+	•	Improve dataset balance using synthetic oversampling (e.g., SMOTE).
+	•	Expand features to include 30–60-day temperature trends, solar radiation, and soil moisture.
+	•	Implement real-time climate data integration for adaptive learning models.
