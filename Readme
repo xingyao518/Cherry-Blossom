@@ -1,14 +1,14 @@
 Cherry Blossom Prediction Project
 
 
-•Project Overview
+Project Overview
 
 This project aims to predict cherry blossom bloom dates across five global locations—Washington, D.C., New York City, Vancouver, Liestal-Weideli (Switzerland), and Kyoto (Japan)—by integrating historical bloom records with meteorological variables. We employ machine learning models to analyze the relationship between climate factors such as maximum temperature (TMAX), minimum temperature (TMIN), average temperature (TAVG), and precipitation (PRCP) with bloom timing.
 
 To improve the accuracy and reliability of cherry blossom bloom predictions, feature engineering was conducted by integrating biological, climatological, and temporal variables. These features were selected to capture the seasonal temperature accumulation, precipitation trends, and long-term climate shifts that influence bloom timing across different geographic regions.
 
 
-•Temperature-Based Predictors
+Temperature-Based Predictors
 
 Temperature is a primary driver of cherry blossom phenology. Several temperature-related variables were incorporated to enhance the model’s ability to capture thermal accumulation and variability:
 	•	Maximum Temperature (TMAX), Minimum Temperature (TMIN), and Average Temperature (TAVG) were used to assess the thermal conditions influencing bud development.
